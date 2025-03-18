@@ -406,4 +406,22 @@ if [ -f "$composeBinary" ]; then
     sudo rm "$composeBinary"
 fi 
 
+kubectlBinary=$(which kubectl)
+if [ -f "$kubectlBinary" ]; then
+    echo "Removing kubectl binary file"
+    sudo rm "$kubectlBinary"
+fi 
+
+kindBinary=$(which kind)
+if [ -f "$kindBinary" ]; then
+    echo "Removing kind binary file"
+    sudo rm "$kindBinary"
+fi 
+
+minikubeBinary=$(which minikube)
+if [ -f "$minikubeBinary" ]; then
+    echo "Removing minikube binary file"
+    sudo rm "$minikubeBinary"
+fi 
+
 echo "Script finished..."
